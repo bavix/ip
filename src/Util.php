@@ -36,11 +36,7 @@ class Util
      */
     public static function ip2long(string $ip): string
     {
-        if (static::isIPv6($ip)) {
-            return \gmp_import(\inet_pton($ip));
-        }
-
-        return \ip2long($ip);
+        return \gmp_import(\inet_pton($ip));
     }
 
     /**
