@@ -1,0 +1,21 @@
+{
+  "name": "bavix/ip",
+  "description": "Easy package to work with ip addresses",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Babichev Maxim",
+      "email": "info@babichev.net"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Bavix\\IP\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.1",
+    "ext-sockets": "*",
+    "ext-gmp": "*"
+  }
+}
