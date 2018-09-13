@@ -41,14 +41,15 @@ class Util
 
     /**
      * @param string $long
+     * @param bool $forceIPv6
      * @return string
      */
-    public static function long2ip(string $long): string
+    public static function long2ip(string $long, bool $forceIPv6 = false): string
     {
         /**
          * @var \GMP $long
          */
-        if (\gmp_cmp($long, static::IPv4_INT_MAX) > 0) {
+        if ($forceIPv6 || \gmp_cmp($long, static::IPv4_INT_MAX) > 0) {
             return (string)\inet_ntop(
                 \str_pad(
                     \gmp_export($long),
