@@ -1,6 +1,6 @@
 <?php
 
-namespace Bavix\Ip;
+namespace Bavix\IP;
 
 class IP
 {
